@@ -3,21 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactCompiler: true,
   output: 'standalone', // Required for Docker deployments
-  async redirects() {
-    return [
-      {
-        source: '/:path(.*)',
-        has: [
-          {
-            type: 'host',
-            value: 'admin\\.thegreatbulls\\.in',
-          },
-        ],
-        destination: '/admin/:path',
-        permanent: false,
-      },
-    ];
-  },
   images: {
     remotePatterns: [
       {
