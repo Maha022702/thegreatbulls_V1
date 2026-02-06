@@ -6,17 +6,17 @@ export function middleware(request: NextRequest) {
 
   // Check if it's the admin subdomain
   if (hostname.startsWith('admin.')) {
-    // Redirect to /admin route
+    // Prepend /admin to all paths on admin subdomain if not already there
     if (!pathname.startsWith('/admin')) {
       const newUrl = request.nextUrl.clone();
-      newUrl.pathname = `/admin${pathname}`;
+      newUrl.pathname = '/admin' + pathname;
       return NextResponse.rewrite(newUrl);
     }
   } else {
-    // For main domain, don't show /admin directly - redirect to /admin page
-    if (pathname === '/admin' || pathname.startsWith('/admin/')) {
-      // Only allow /admin and /admin/* on admin subdomain
-      return NextResponse.redirect(new URL('https://admin.thegreatbulls.in' + pathname, request.url));
+    // For main domain, redirect /admin paths to admin subdomain
+    if (pathname.startsWith('/admin')) {
+      const newPath = pathname.replace(/^\/admin/, '') || '/';
+      return NextResponse.redirect('https://admin.thegreatbulls.in' + newPath);
     }
   }
 
