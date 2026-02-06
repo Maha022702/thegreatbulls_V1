@@ -1,3 +1,0 @@
-module.exports=[23281,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(57899);a.n(d("[project]/Documents/Projects/thegreatbulls-react/thegreatbulls_v1/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},78401,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(57899);a.n(d("[project]/Documents/Projects/thegreatbulls-react/thegreatbulls_v1/node_modules/next/dist/client/components/builtin/global-error.js"))},85334,a=>{"use strict";a.i(23281);var b=a.i(78401);a.n(b)}];
-
-//# sourceMappingURL=a1962_next_dist_client_components_builtin_global-error_71c25b40.js.map
