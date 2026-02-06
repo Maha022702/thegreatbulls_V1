@@ -1,0 +1,896 @@
+[0;34m
+╔════════════════════════════════════════════════════════════╗
+║    AUTOMATED AWS DEPLOYMENT - The Great Bulls            ║
+║    MongoDB will be installed on EC2                       ║
+╚════════════════════════════════════════════════════════════╝
+[0m
+[1;33mStep 1: Creating EC2 Key Pair...[0m
+[0;32m✅ Key pair created[0m
+[1;33mStep 2: Creating Security Group...[0m
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-0031faf4c7f48c3ad",
+            "GroupId": "sg-058a402593c4524c3",
+            "GroupOwnerId": "955223516342",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22,
+            "CidrIpv4": "0.0.0.0/0",
+            "SecurityGroupRuleArn": "arn:aws:ec2:us-east-1:955223516342:security-group-rule/sgr-0031faf4c7f48c3ad"
+        }
+    ]
+}
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-0f7dc1e74719cc4b1",
+            "GroupId": "sg-058a402593c4524c3",
+            "GroupOwnerId": "955223516342",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80,
+            "CidrIpv4": "0.0.0.0/0",
+            "SecurityGroupRuleArn": "arn:aws:ec2:us-east-1:955223516342:security-group-rule/sgr-0f7dc1e74719cc4b1"
+        }
+    ]
+}
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-0974f3215cdd0fe3b",
+            "GroupId": "sg-058a402593c4524c3",
+            "GroupOwnerId": "955223516342",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443,
+            "CidrIpv4": "0.0.0.0/0",
+            "SecurityGroupRuleArn": "arn:aws:ec2:us-east-1:955223516342:security-group-rule/sgr-0974f3215cdd0fe3b"
+        }
+    ]
+}
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-042a3ed6da7038a69",
+            "GroupId": "sg-058a402593c4524c3",
+            "GroupOwnerId": "955223516342",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 3000,
+            "ToPort": 3000,
+            "CidrIpv4": "0.0.0.0/0",
+            "SecurityGroupRuleArn": "arn:aws:ec2:us-east-1:955223516342:security-group-rule/sgr-042a3ed6da7038a69"
+        }
+    ]
+}
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-0572c1f58fe08284d",
+            "GroupId": "sg-058a402593c4524c3",
+            "GroupOwnerId": "955223516342",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 27017,
+            "ToPort": 27017,
+            "CidrIpv4": "0.0.0.0/0",
+            "SecurityGroupRuleArn": "arn:aws:ec2:us-east-1:955223516342:security-group-rule/sgr-0572c1f58fe08284d"
+        }
+    ]
+}
+[0;32m✅ Security group created[0m
+[1;33mStep 3: Launching EC2 Instance...[0m
+[0;32m✅ Instance launched: i-0d6bd4e8714ca7ba2[0m
+[1;33mWaiting for instance to be running...[0m
+[0;32m✅ Instance running at: 98.80.129.221[0m
+[1;33mWaiting 30 seconds for SSH to be ready...[0m
+[0;32m✅ Environment configured[0m
+[1;33mStep 4: Setting up server and deploying...[0m
+Building application locally...
+
+> thegreatbulls_v1@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /home/aj/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /home/aj/Documents/Projects/thegreatbulls-react/thegreatbulls_v1/package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local, .env.production, .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.6s
+  Running TypeScript ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/21) ...
+  Generating static pages using 15 workers (5/21) 
+  Generating static pages using 15 workers (10/21) 
+  Generating static pages using 15 workers (15/21) 
+✓ Generating static pages using 15 workers (21/21) in 433.1ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /admin
+├ ○ /admin/blog
+├ ○ /admin/courses
+├ ○ /admin/testimonials
+├ ○ /admin/webinars
+├ ƒ /api/auth/[...nextauth]
+├ ƒ /api/auth/register
+├ ƒ /api/blog
+├ ƒ /api/courses
+├ ƒ /api/courses/[id]
+├ ƒ /api/stock/[symbol]
+├ ƒ /api/testimonials
+├ ƒ /api/webinars
+├ ○ /blog
+├ ○ /courses
+├ ƒ /courses/[slug]
+├ ○ /dashboard
+├ ○ /login
+├ ○ /register
+├ ○ /testimonials
+└ ○ /webinars
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Warning: Permanently added '98.80.129.221' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-1017-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Feb  5 08:34:52 UTC 2026
+
+  System load:  0.2841796875      Processes:             112
+  Usage of /:   20.5% of 7.57GB   Users logged in:       0
+  Memory usage: 5%                IPv4 address for ens5: 172.31.16.40
+  Swap usage:   0%
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+Installing system packages...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  dirmngr gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server
+  gpgconf gpgsm gpgv libcurl4
+Suggested packages:
+  pinentry-gnome3 tor parcimonie xloadimage scdaemon
+The following packages will be upgraded:
+  curl dirmngr gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client
+  gpg-wks-server gpgconf gpgsm gpgv libcurl4
+13 upgraded, 0 newly installed, 0 to remove and 232 not upgraded.
+Need to get 2732 kB of archives.
+After this operation, 2048 B of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpg-wks-client amd64 2.2.27-3ubuntu2.5 [62.7 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 dirmngr amd64 2.2.27-3ubuntu2.5 [293 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpg-wks-server amd64 2.2.27-3ubuntu2.5 [57.6 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gnupg-utils amd64 2.2.27-3ubuntu2.5 [309 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpg-agent amd64 2.2.27-3ubuntu2.5 [209 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpg amd64 2.2.27-3ubuntu2.5 [519 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpgconf amd64 2.2.27-3ubuntu2.5 [94.3 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gnupg-l10n all 2.2.27-3ubuntu2.5 [54.5 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gnupg all 2.2.27-3ubuntu2.5 [315 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpgsm amd64 2.2.27-3ubuntu2.5 [197 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpgv amd64 2.2.27-3ubuntu2.5 [137 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.21 [194 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.21 [290 kB]
+Fetched 2732 kB in 0s (43.1 MB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 64799 files and directories currently installed.)
+Preparing to unpack .../00-gpg-wks-client_2.2.27-3ubuntu2.5_amd64.deb ...
+Unpacking gpg-wks-client (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../01-dirmngr_2.2.27-3ubuntu2.5_amd64.deb ...
+Unpacking dirmngr (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../02-gpg-wks-server_2.2.27-3ubuntu2.5_amd64.deb ...
+Unpacking gpg-wks-server (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../03-gnupg-utils_2.2.27-3ubuntu2.5_amd64.deb ...
+Unpacking gnupg-utils (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../04-gpg-agent_2.2.27-3ubuntu2.5_amd64.deb ...
+Unpacking gpg-agent (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../05-gpg_2.2.27-3ubuntu2.5_amd64.deb ...
+Unpacking gpg (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../06-gpgconf_2.2.27-3ubuntu2.5_amd64.deb ...
+Unpacking gpgconf (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../07-gnupg-l10n_2.2.27-3ubuntu2.5_all.deb ...
+Unpacking gnupg-l10n (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../08-gnupg_2.2.27-3ubuntu2.5_all.deb ...
+Unpacking gnupg (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../09-gpgsm_2.2.27-3ubuntu2.5_amd64.deb ...
+Unpacking gpgsm (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Preparing to unpack .../10-gpgv_2.2.27-3ubuntu2.5_amd64.deb ...
+Unpacking gpgv (2.2.27-3ubuntu2.5) over (2.2.27-3ubuntu2.1) ...
+Setting up gpgv (2.2.27-3ubuntu2.5) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 64799 files and directories currently installed.)
+Preparing to unpack .../curl_7.81.0-1ubuntu1.21_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.21) over (7.81.0-1ubuntu1.15) ...
+Preparing to unpack .../libcurl4_7.81.0-1ubuntu1.21_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.21) over (7.81.0-1ubuntu1.15) ...
+Setting up gnupg-l10n (2.2.27-3ubuntu2.5) ...
+Setting up gpgconf (2.2.27-3ubuntu2.5) ...
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.21) ...
+Setting up curl (7.81.0-1ubuntu1.21) ...
+Setting up gpg (2.2.27-3ubuntu2.5) ...
+Setting up gnupg-utils (2.2.27-3ubuntu2.5) ...
+Setting up gpg-agent (2.2.27-3ubuntu2.5) ...
+Setting up gpgsm (2.2.27-3ubuntu2.5) ...
+Setting up dirmngr (2.2.27-3ubuntu2.5) ...
+Setting up gpg-wks-server (2.2.27-3ubuntu2.5) ...
+Setting up gpg-wks-client (2.2.27-3ubuntu2.5) ...
+Setting up gnupg (2.2.27-3ubuntu2.5) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.4) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for install-info (6.8-4build1) ...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Installing MongoDB...
+deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  mongodb-database-tools mongodb-mongosh mongodb-org-database
+  mongodb-org-database-tools-extra mongodb-org-mongos mongodb-org-server
+  mongodb-org-shell mongodb-org-tools
+The following NEW packages will be installed:
+  mongodb-database-tools mongodb-mongosh mongodb-org mongodb-org-database
+  mongodb-org-database-tools-extra mongodb-org-mongos mongodb-org-server
+  mongodb-org-shell mongodb-org-tools
+0 upgraded, 9 newly installed, 0 to remove and 232 not upgraded.
+Need to get 181 MB of archives.
+After this operation, 605 MB of additional disk space will be used.
+Get:1 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0/multiverse amd64 mongodb-database-tools amd64 100.14.1 [60.5 MB]
+Get:2 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0/multiverse amd64 mongodb-mongosh amd64 2.6.0 [58.0 MB]
+Get:3 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0/multiverse amd64 mongodb-org-shell amd64 7.0.29 [2988 B]
+Get:4 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0/multiverse amd64 mongodb-org-server amd64 7.0.29 [37.1 MB]
+Get:5 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0/multiverse amd64 mongodb-org-mongos amd64 7.0.29 [25.8 MB]
+Get:6 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0/multiverse amd64 mongodb-org-database-tools-extra amd64 7.0.29 [7782 B]
+Get:7 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0/multiverse amd64 mongodb-org-database amd64 7.0.29 [3424 B]
+Get:8 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0/multiverse amd64 mongodb-org-tools amd64 7.0.29 [2770 B]
+Get:9 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0/multiverse amd64 mongodb-org amd64 7.0.29 [2804 B]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 181 MB in 3s (67.6 MB/s)
+Selecting previously unselected package mongodb-database-tools.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 64799 files and directories currently installed.)
+Preparing to unpack .../0-mongodb-database-tools_100.14.1_amd64.deb ...
+Unpacking mongodb-database-tools (100.14.1) ...
+Selecting previously unselected package mongodb-mongosh.
+Preparing to unpack .../1-mongodb-mongosh_2.6.0_amd64.deb ...
+Unpacking mongodb-mongosh (2.6.0) ...
+Selecting previously unselected package mongodb-org-shell.
+Preparing to unpack .../2-mongodb-org-shell_7.0.29_amd64.deb ...
+Unpacking mongodb-org-shell (7.0.29) ...
+Selecting previously unselected package mongodb-org-server.
+Preparing to unpack .../3-mongodb-org-server_7.0.29_amd64.deb ...
+Unpacking mongodb-org-server (7.0.29) ...
+Selecting previously unselected package mongodb-org-mongos.
+Preparing to unpack .../4-mongodb-org-mongos_7.0.29_amd64.deb ...
+Unpacking mongodb-org-mongos (7.0.29) ...
+Selecting previously unselected package mongodb-org-database-tools-extra.
+Preparing to unpack .../5-mongodb-org-database-tools-extra_7.0.29_amd64.deb ...
+Unpacking mongodb-org-database-tools-extra (7.0.29) ...
+Selecting previously unselected package mongodb-org-database.
+Preparing to unpack .../6-mongodb-org-database_7.0.29_amd64.deb ...
+Unpacking mongodb-org-database (7.0.29) ...
+Selecting previously unselected package mongodb-org-tools.
+Preparing to unpack .../7-mongodb-org-tools_7.0.29_amd64.deb ...
+Unpacking mongodb-org-tools (7.0.29) ...
+Selecting previously unselected package mongodb-org.
+Preparing to unpack .../8-mongodb-org_7.0.29_amd64.deb ...
+Unpacking mongodb-org (7.0.29) ...
+Setting up mongodb-mongosh (2.6.0) ...
+Setting up mongodb-org-server (7.0.29) ...
+Adding system user `mongodb' (UID 115) ...
+Adding new user `mongodb' (UID 115) with group `nogroup' ...
+Not creating home directory `/home/mongodb'.
+Adding group `mongodb' (GID 122) ...
+Done.
+Adding user `mongodb' to group `mongodb' ...
+Adding user mongodb to group mongodb
+Done.
+Setting up mongodb-org-shell (7.0.29) ...
+Setting up mongodb-database-tools (100.14.1) ...
+Setting up mongodb-org-mongos (7.0.29) ...
+Setting up mongodb-org-database-tools-extra (7.0.29) ...
+Setting up mongodb-org-database (7.0.29) ...
+Setting up mongodb-org-tools (7.0.29) ...
+Setting up mongodb-org (7.0.29) ...
+Processing triggers for man-db (2.10.2-1) ...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Starting MongoDB...
+Created symlink /etc/systemd/system/multi-user.target.wants/mongod.service → /lib/systemd/system/mongod.service.
+Installing Node.js 20...
+[38;5;79m2026-02-05 08:35:46 - Installing pre-requisites[0m
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 InRelease
+Hit:5 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+232 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.81.0-1ubuntu1.21).
+gnupg is already the newest version (2.2.27-3ubuntu2.5).
+The following NEW packages will be installed:
+  apt-transport-https
+The following packages will be upgraded:
+  ca-certificates
+1 upgraded, 1 newly installed, 0 to remove and 231 not upgraded.
+Need to get 164 kB of archives.
+After this operation, 179 kB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates all 20240203~22.04.1 [162 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 apt-transport-https all 2.4.14 [1510 B]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 164 kB in 0s (7999 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 64859 files and directories currently installed.)
+Preparing to unpack .../ca-certificates_20240203~22.04.1_all.deb ...
+Unpacking ca-certificates (20240203~22.04.1) over (20230311ubuntu0.22.04.1) ...
+Selecting previously unselected package apt-transport-https.
+Preparing to unpack .../apt-transport-https_2.4.14_all.deb ...
+Unpacking apt-transport-https (2.4.14) ...
+Setting up apt-transport-https (2.4.14) ...
+Setting up ca-certificates (20240203~22.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Updating certificates in /etc/ssl/certs...
+rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+14 added, 5 removed; done.
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for ca-certificates (20240203~22.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:4 https://deb.nodesource.com/node_20.x nodistro InRelease [12.1 kB]
+Hit:5 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 InRelease
+Hit:6 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Get:7 https://deb.nodesource.com/node_20.x nodistro/main amd64 Packages [13.6 kB]
+Fetched 25.8 kB in 2s (13.4 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+231 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[1;34m2026-02-05 08:36:05 - Repository configured successfully.[0m
+[38;5;79m2026-02-05 08:36:05 - To install Node.js, run: apt install nodejs -y[0m
+[38;5;79m2026-02-05 08:36:05 - You can use N|solid Runtime as a node.js alternative[0m
+[1;32m2026-02-05 08:36:05 - To install N|solid Runtime, run: apt install nsolid -y 
+[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  nodejs
+0 upgraded, 1 newly installed, 0 to remove and 231 not upgraded.
+Need to get 32.0 MB of archives.
+After this operation, 197 MB of additional disk space will be used.
+Get:1 https://deb.nodesource.com/node_20.x nodistro/main amd64 nodejs amd64 20.20.0-1nodesource1 [32.0 MB]
+Fetched 32.0 MB in 0s (67.0 MB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Selecting previously unselected package nodejs.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 64872 files and directories currently installed.)
+Preparing to unpack .../nodejs_20.20.0-1nodesource1_amd64.deb ...
+Unpacking nodejs (20.20.0-1nodesource1) ...
+Setting up nodejs (20.20.0-1nodesource1) ...
+Processing triggers for man-db (2.10.2-1) ...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Installing PM2...
+
+added 133 packages in 7s
+
+13 packages are looking for funding
+  run `npm fund` for details
+Creating application directory...
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.9.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.9.0
+npm notice To update run: npm install -g npm@11.9.0
+npm notice
+Uploading application files...
+sending incremental file list
+./
+.dockerignore
+.env
+.env.local
+.env.production
+.gitignore
+ADMIN_FORM_FINAL_SUMMARY.md
+ADMIN_FORM_VERIFICATION_REPORT.md
+COURSES_DATA_VERIFICATION_REPORT.md
+DEPLOYMENT-READY.md
+DEPLOYMENT.md
+DOCUMENTATION_INDEX.md
+Dockerfile
+FORM_QUICK_REFERENCE.md
+FORM_VISUAL_SUMMARY.md
+QUICK-START.md
+README.md
+VERIFICATION_COMPLETE.md
+WHAT_YOU_WILL_LEARN_DETAILED_GUIDE.md
+build-output.log
+check-course-data.js
+compare-data.js
+components.json
+deploy-auto.sh
+deploy-to-ec2.sh
+deploy-wizard.sh
+deployment.log
+ecosystem.config.js
+eslint.config.mjs
+global-bundle.pem
+global-bundle.pem.1
+migrate-database.sh
+next-env.d.ts
+next.config.ts
+package-lock.json
+package.json
+postcss.config.mjs
+setup-ec2.sh
+setup-env.sh
+test-course-update.sh
+tsconfig.json
+prisma/
+prisma/schema.prisma
+public/
+public/file.svg
+public/globe.svg
+public/next.svg
+public/vercel.svg
+public/window.svg
+scripts/
+scripts/migrate-learning-outcomes.js
+scripts/populate-course-content.js
+scripts/seed.ts
+scripts/update-course-content.js
+src/
+src/api/
+src/app/
+src/app/favicon.ico
+src/app/globals.css
+src/app/layout.tsx
+src/app/page.tsx
+src/app/admin/
+src/app/admin/page.tsx
+src/app/admin/blog/
+src/app/admin/blog/page.tsx
+src/app/admin/courses/
+src/app/admin/courses/page.tsx
+src/app/admin/testimonials/
+src/app/admin/testimonials/page.tsx
+src/app/admin/webinars/
+src/app/admin/webinars/page.tsx
+src/app/api/
+src/app/api/auth/
+src/app/api/auth/[...nextauth]/
+src/app/api/auth/[...nextauth]/route.ts
+src/app/api/auth/register/
+src/app/api/auth/register/route.ts
+src/app/api/blog/
+src/app/api/blog/route.ts
+src/app/api/courses/
+src/app/api/courses/route-old.ts
+src/app/api/courses/route.ts
+src/app/api/courses/[id]/
+src/app/api/courses/[id]/route.ts
+src/app/api/stock/
+src/app/api/stock/[symbol]/
+src/app/api/stock/[symbol]/route.ts
+src/app/api/testimonials/
+src/app/api/testimonials/route.ts
+src/app/api/webinars/
+src/app/api/webinars/route.ts
+src/app/blog/
+src/app/blog/page.tsx
+src/app/courses/
+src/app/courses/page.tsx
+src/app/courses/[slug]/
+src/app/courses/[slug]/page.tsx
+src/app/dashboard/
+src/app/dashboard/page.tsx
+src/app/login/
+src/app/login/page.tsx
+src/app/register/
+src/app/register/page.tsx
+src/app/testimonials/
+src/app/testimonials/page.tsx
+src/app/webinars/
+src/app/webinars/page.tsx
+src/components/
+src/components/AdminSidebar.tsx
+src/components/Navbar.tsx
+src/components/Providers.tsx
+src/components/admin/
+src/components/admin/AdminLayout.tsx
+src/components/ui/
+src/components/ui/badge.tsx
+src/components/ui/button.tsx
+src/components/ui/card.tsx
+src/components/ui/dialog.tsx
+src/components/ui/input.tsx
+src/components/ui/label.tsx
+src/components/ui/select.tsx
+src/components/ui/table.tsx
+src/data/
+src/lib/
+src/lib/api.ts
+src/lib/auth.ts
+src/lib/prisma.ts
+src/lib/store.ts
+src/lib/utils.ts
+src/types/
+src/types/next-auth.d.ts
+
+sent 300,134 bytes  received 1,965 bytes  35,541.06 bytes/sec
+total size is 1,287,456  speedup is 4.26
+Installing dependencies and starting application...
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-1017-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Feb  5 08:36:27 UTC 2026
+
+  System load:  1.59326171875     Processes:             114
+  Usage of /:   44.3% of 7.57GB   Users logged in:       0
+  Memory usage: 9%                IPv4 address for ens5: 172.31.16.40
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+242 updates can be applied immediately.
+164 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '24.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Installing dependencies...
+npm warn config production Use `--omit=dev` instead.
+Generating Prisma Client...
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: lucide-react@0.344.0
+npm error Found: react@19.2.3
+npm error node_modules/react
+npm error   react@"19.2.3" from the root project
+npm error   peer react@">=16.8.0" from @floating-ui/react-dom@2.1.7
+npm error   node_modules/@floating-ui/react-dom
+npm error     @floating-ui/react-dom@"^2.0.0" from @radix-ui/react-popper@1.2.8
+npm error     node_modules/@radix-ui/react-popper
+npm error       @radix-ui/react-popper@"1.2.8" from @radix-ui/react-popover@1.1.15
+npm error       node_modules/@radix-ui/react-popover
+npm error         @radix-ui/react-popover@"^1.1.15" from the root project
+npm error       1 more (@radix-ui/react-select)
+npm error   50 more (@radix-ui/react-arrow, @radix-ui/react-collection, ...)
+npm error
+npm error Could not resolve dependency:
+npm error peer react@"^16.5.1 || ^17.0.0 || ^18.0.0" from lucide-react@0.344.0
+npm error node_modules/lucide-react
+npm error   lucide-react@"^0.344.0" from the root project
+npm error
+npm error Conflicting peer dependency: react@18.3.1
+npm error node_modules/react
+npm error   peer react@"^16.5.1 || ^17.0.0 || ^18.0.0" from lucide-react@0.344.0
+npm error   node_modules/lucide-react
+npm error     lucide-react@"^0.344.0" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /home/ubuntu/.npm/_logs/2026-02-05T08_36_37_870Z-eresolve-report.txt
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.9.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.9.0
+npm notice To update run: npm install -g npm@11.9.0
+npm notice
+npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2026-02-05T08_36_37_870Z-debug-0.log
+npm warn exec The following package was not found and will be installed: prisma@7.3.0
+Pushing database schema...
+Prisma schema loaded from prisma/schema.prisma.
+Error: Prisma schema validation - (get-config wasm)
+Error code: P1012
+error: The datasource property `url` is no longer supported in schema files. Move connection URLs for Migrate to `prisma.config.ts` and pass either `adapter` for a direct database connection or `accelerateUrl` for Accelerate to the `PrismaClient` constructor. See https://pris.ly/d/config-datasource and https://pris.ly/d/prisma7-client-config
+  -->  prisma/schema.prisma:7
+   | 
+ 6 |   provider = "mongodb"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+[Context: getConfig]
+
+Prisma CLI Version : 7.3.0
+Prisma schema loaded from prisma/schema.prisma.
+Error: Prisma schema validation - (get-config wasm)
+Error code: P1012
+error: The datasource property `url` is no longer supported in schema files. Move connection URLs for Migrate to `prisma.config.ts` and pass either `adapter` for a direct database connection or `accelerateUrl` for Accelerate to the `PrismaClient` constructor. See https://pris.ly/d/config-datasource and https://pris.ly/d/prisma7-client-config
+  -->  prisma/schema.prisma:7
+   | 
+ 6 |   provider = "mongodb"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+[Context: getConfig]
+
+Prisma CLI Version : 7.3.0
+Building application...
+
+> thegreatbulls_v1@0.1.0 build
+> next build
+
+sh: 1: next: not found
+Starting with PM2...
+
+                        -------------
+
+__/\\\\\\\\\\\\\____/\\\\____________/\\\\____/\\\\\\\\\_____
+ _\/\\\/////////\\\_\/\\\\\\________/\\\\\\__/\\\///////\\\___
+  _\/\\\_______\/\\\_\/\\\//\\\____/\\\//\\\_\///______\//\\\__
+   _\/\\\\\\\\\\\\\/__\/\\\\///\\\/\\\/_\/\\\___________/\\\/___
+    _\/\\\/////////____\/\\\__\///\\\/___\/\\\________/\\\//_____
+     _\/\\\_____________\/\\\____\///_____\/\\\_____/\\\//________
+      _\/\\\_____________\/\\\_____________\/\\\___/\\\/___________
+       _\/\\\_____________\/\\\_____________\/\\\__/\\\\\\\\\\\\\\\_
+        _\///______________\///______________\///__\///////////////__
+
+
+                          Runtime Edition
+
+        PM2 is a Production Process Manager for Node.js applications
+                     with a built-in Load Balancer.
+
+                Start and Daemonize any application:
+                $ pm2 start app.js
+
+                Load Balance 4 instances of api.js:
+                $ pm2 start api.js -i 4
+
+                Monitor in production:
+                $ pm2 monitor
+
+                Make pm2 auto-boot at server restart:
+                $ pm2 startup
+
+                To go further checkout:
+                http://pm2.io/
+
+
+                        -------------
+
+[PM2] Spawning PM2 daemon with pm2_home=/home/ubuntu/.pm2
+[PM2] PM2 Successfully daemonized
+[PM2][WARN] Applications thegreatbulls not running, starting...
+[PM2][ERROR] Error: Script not found: /home/ubuntu/thegreatbulls/node_modules/next/dist/bin/next
+[PM2] Saving current process list...
+[PM2][WARN] PM2 is not managing any process, skipping save...
+[PM2][WARN] To force saving use: pm2 save --force
+
+                        -------------
+
+__/\\\\\\\\\\\\\____/\\\\____________/\\\\____/\\\\\\\\\_____
+ _\/\\\/////////\\\_\/\\\\\\________/\\\\\\__/\\\///////\\\___
+  _\/\\\_______\/\\\_\/\\\//\\\____/\\\//\\\_\///______\//\\\__
+   _\/\\\\\\\\\\\\\/__\/\\\\///\\\/\\\/_\/\\\___________/\\\/___
+    _\/\\\/////////____\/\\\__\///\\\/___\/\\\________/\\\//_____
+     _\/\\\_____________\/\\\____\///_____\/\\\_____/\\\//________
+      _\/\\\_____________\/\\\_____________\/\\\___/\\\/___________
+       _\/\\\_____________\/\\\_____________\/\\\__/\\\\\\\\\\\\\\\_
+        _\///______________\///______________\///__\///////////////__
+
+
+                          Runtime Edition
+
+        PM2 is a Production Process Manager for Node.js applications
+                     with a built-in Load Balancer.
+
+                Start and Daemonize any application:
+                $ pm2 start app.js
+
+                Load Balance 4 instances of api.js:
+                $ pm2 start api.js -i 4
+
+                Monitor in production:
+                $ pm2 monitor
+
+                Make pm2 auto-boot at server restart:
+                $ pm2 startup
+
+                To go further checkout:
+                http://pm2.io/
+
+
+                        -------------
+
+[PM2] Init System found: systemd
+Platform systemd
+Template
+[Unit]
+Description=PM2 process manager
+Documentation=https://pm2.keymetrics.io/
+After=network.target
+
+[Service]
+Type=forking
+User=ubuntu
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+Environment=PM2_HOME=/home/ubuntu/.pm2
+PIDFile=/home/ubuntu/.pm2/pm2.pid
+Restart=on-failure
+
+ExecStart=/usr/lib/node_modules/pm2/bin/pm2 resurrect
+ExecReload=/usr/lib/node_modules/pm2/bin/pm2 reload all
+ExecStop=/usr/lib/node_modules/pm2/bin/pm2 kill
+
+[Install]
+WantedBy=multi-user.target
+
+Target path
+/etc/systemd/system/pm2-ubuntu.service
+Command list
+[ 'systemctl enable pm2-ubuntu' ]
+[PM2] Writing init configuration in /etc/systemd/system/pm2-ubuntu.service
+[PM2] Making script booting at startup...
+[PM2] [-] Executing: systemctl enable pm2-ubuntu...
+Created symlink /etc/systemd/system/multi-user.target.wants/pm2-ubuntu.service → /etc/systemd/system/pm2-ubuntu.service.
+[PM2] [v] Command successfully executed.
++---------------------------------------+
+[PM2] Freeze a process list on reboot via:
+$ pm2 save
+
+[PM2] Remove init script via:
+$ pm2 unstartup systemd
+Application started!
+┌────┬───────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name      │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+└────┴───────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+[0;32m
+╔════════════════════════════════════════════════════════════╗
+║           🎉 DEPLOYMENT SUCCESSFUL! 🎉                    ║
+╚════════════════════════════════════════════════════════════╝
+[0m
+
+[1;33mYour application is now live at:[0m
+[0;32m➜  http://98.80.129.221:3000[0m
+
+[1;33mInstance Details:[0m
+  Instance ID: i-0d6bd4e8714ca7ba2
+  Public IP: 98.80.129.221
+  SSH: ssh -i ~/.ssh/thegreatbulls-key.pem ubuntu@98.80.129.221
+
+[1;33mUseful Commands:[0m
+  View logs: ssh -i ~/.ssh/thegreatbulls-key.pem ubuntu@98.80.129.221 'pm2 logs'
+  Restart: ssh -i ~/.ssh/thegreatbulls-key.pem ubuntu@98.80.129.221 'pm2 restart thegreatbulls'
+  Status: ssh -i ~/.ssh/thegreatbulls-key.pem ubuntu@98.80.129.221 'pm2 status'
+
+[0;34mMongoDB is running locally on the EC2 instance[0m
+[0;34mYou can migrate to MongoDB Atlas later if needed[0m
+
