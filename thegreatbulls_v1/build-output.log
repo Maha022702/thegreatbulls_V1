@@ -1,0 +1,54 @@
+
+> thegreatbulls_v1@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /home/aj/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /home/aj/Documents/Projects/thegreatbulls-react/thegreatbulls_v1/package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local, .env.production, .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.8s
+  Running TypeScript ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/21) ...
+  Generating static pages using 15 workers (5/21) 
+  Generating static pages using 15 workers (10/21) 
+  Generating static pages using 15 workers (15/21) 
+✓ Generating static pages using 15 workers (21/21) in 340.7ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /admin
+├ ○ /admin/blog
+├ ○ /admin/courses
+├ ○ /admin/testimonials
+├ ○ /admin/webinars
+├ ƒ /api/auth/[...nextauth]
+├ ƒ /api/auth/register
+├ ƒ /api/blog
+├ ƒ /api/courses
+├ ƒ /api/courses/[id]
+├ ƒ /api/stock/[symbol]
+├ ƒ /api/testimonials
+├ ƒ /api/webinars
+├ ○ /blog
+├ ○ /courses
+├ ƒ /courses/[slug]
+├ ○ /dashboard
+├ ○ /login
+├ ○ /register
+├ ○ /testimonials
+└ ○ /webinars
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -1,0 +1,97 @@
+2026-02-05T09:17:35: ▲ Next.js 16.1.6
+2026-02-05T09:17:35: - Local:         http://localhost:3000
+2026-02-05T09:17:35: - Network:       http://172.31.16.40:3000
+2026-02-05T09:17:35: 
+2026-02-05T09:17:35: ✓ Starting...
+2026-02-05T09:17:36: ✓ Ready in 1103ms
+2026-02-05T09:22:20: ▲ Next.js 16.1.6
+2026-02-05T09:22:20: - Local:         http://localhost:3000
+2026-02-05T09:22:20: - Network:       http://172.31.16.40:3000
+2026-02-05T09:22:20: 
+2026-02-05T09:22:20: ✓ Starting...
+2026-02-05T09:22:21: ✓ Ready in 1141ms
+2026-02-05T09:23:12: ▲ Next.js 16.1.6
+2026-02-05T09:23:12: - Local:         http://localhost:3000
+2026-02-05T09:23:12: - Network:       http://172.31.16.40:3000
+2026-02-05T09:23:12: 
+2026-02-05T09:23:12: ✓ Starting...
+2026-02-05T09:23:12: ✓ Ready in 718ms
+2026-02-05T09:24:59: ▲ Next.js 16.1.6
+2026-02-05T09:24:59: - Local:         http://localhost:3000
+2026-02-05T09:24:59: - Network:       http://172.31.16.40:3000
+2026-02-05T09:24:59: 
+2026-02-05T09:24:59: ✓ Starting...
+2026-02-05T09:25:00: ✓ Ready in 1155ms
+2026-02-05T09:42:36: ▲ Next.js 16.1.6
+2026-02-05T09:42:36: - Local:         http://localhost:3000
+2026-02-05T09:42:36: - Network:       http://172.31.16.40:3000
+2026-02-05T09:42:36: 
+2026-02-05T09:42:36: ✓ Starting...
+2026-02-05T09:42:36: ✓ Ready in 802ms
+2026-02-05T09:43:10: POST /api/courses - Starting course creation
+2026-02-05T09:43:10: Request body received: {
+  title: 'Test Course',
+  category: 'Options Trading',
+  price: 999,
+  instructorName: undefined
+}
+2026-02-05T09:46:55: ▲ Next.js 16.1.6
+2026-02-05T09:46:55: - Local:         http://localhost:3000
+2026-02-05T09:46:55: - Network:       http://172.31.16.40:3000
+2026-02-05T09:46:55: 
+2026-02-05T09:46:55: ✓ Starting...
+2026-02-05T09:46:56: ✓ Ready in 735ms
+2026-02-05T09:47:59: ▲ Next.js 16.1.6
+2026-02-05T09:47:59: - Local:         http://localhost:3000
+2026-02-05T09:47:59: - Network:       http://172.31.16.40:3000
+2026-02-05T09:47:59: 
+2026-02-05T09:47:59: ✓ Starting...
+2026-02-05T09:48:00: ✓ Ready in 1082ms
+2026-02-05T10:51:10: POST /api/courses - Starting course creation
+2026-02-05T10:51:10: Request body received: {
+  title: 'Beginner courses',
+  category: 'Technical Analysis',
+  price: 3000,
+  instructorName: 'Periyasamy Ravi'
+}
+2026-02-05T10:51:10: Validation passed, creating resources...
+2026-02-05T10:51:10: Category ready: 6984761edd459cb6a725a35d
+2026-02-05T10:51:10: Instructor ready: 6984761edd459cb6a725a35e
+2026-02-05T10:51:10: Creating course with slug: beginner-courses-670368
+2026-02-05T10:51:10: Course created successfully: 6984761edd459cb6a725a35f
+2026-02-05T11:09:41: POST /api/courses - Starting course creation
+2026-02-05T11:09:41: Request body received: {
+  title: 'Equity courses',
+  category: 'Technical Analysis',
+  price: 10000,
+  instructorName: 'Periyasamy Ravi'
+}
+2026-02-05T11:09:41: Validation passed, creating resources...
+2026-02-05T11:09:41: Category ready: 6984761edd459cb6a725a35d
+2026-02-05T11:09:41: Instructor ready: 6984761edd459cb6a725a35e
+2026-02-05T11:09:41: Creating course with slug: equity-courses-781330
+2026-02-05T11:09:41: Course created successfully: 69847a75dd459cb6a725a360
+2026-02-05T11:19:37: POST /api/courses - Starting course creation
+2026-02-05T11:19:37: Request body received: {
+  title: 'Option buying courses',
+  category: 'Options Trading',
+  price: 15000,
+  instructorName: 'Periyasamy Ravi'
+}
+2026-02-05T11:19:37: Validation passed, creating resources...
+2026-02-05T11:19:37: Category ready: 6984664f52f42c79f9264d5a
+2026-02-05T11:19:37: Instructor ready: 6984761edd459cb6a725a35e
+2026-02-05T11:19:37: Creating course with slug: option-buying-courses-377798
+2026-02-05T11:19:37: Course created successfully: 69847cc9dd459cb6a725a361
+2026-02-05T11:34:47: POST /api/courses - Starting course creation
+2026-02-05T11:34:47: Request body received: {
+  title: 'Equity + option buying courses (combo)',
+  category: 'Technical Analysis',
+  price: 20000,
+  instructorName: 'Periyasamy Ravi'
+}
+2026-02-05T11:34:47: Validation passed, creating resources...
+2026-02-05T11:34:47: Category ready: 6984761edd459cb6a725a35d
+2026-02-05T11:34:48: Instructor ready: 6984761edd459cb6a725a35e
+2026-02-05T11:34:48: Creating course with slug: equity-option-buying-courses-combo-287906
+2026-02-05T11:34:48: Course created successfully: 69848058dd459cb6a725a362

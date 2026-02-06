@@ -1,0 +1,31 @@
+2026-02-05T09:17:36: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:18:46: Error fetching courses: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.course.findMany()` invocation:
+
+
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: No available servers. Topology: { Type: Unknown, Servers: [ { Address: localhost:27018, Type: Unknown, Error: Kind: I/O error: Connection refused (os error 111), labels: {} } ] }, labels: {}`
+    at async y (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:1537)
+    at async c (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:7887)
+    at async l (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:8928) {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+2026-02-05T09:19:38: Error fetching courses: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.course.findMany()` invocation:
+
+
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: No available servers. Topology: { Type: Unknown, Servers: [ { Address: localhost:27018, Type: Unknown, Error: Kind: I/O error: Connection refused (os error 111), labels: {} } ] }, labels: {}`
+    at async y (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:1537)
+    at async c (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:7887)
+    at async l (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:8928) {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+2026-02-05T09:22:21: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:23:12: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:25:00: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:42:36: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:46:56: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:48:00: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.

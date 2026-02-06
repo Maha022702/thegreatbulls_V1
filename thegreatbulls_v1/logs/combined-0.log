@@ -1,0 +1,187 @@
+2026-02-05T09:17:35: ▲ Next.js 16.1.6
+2026-02-05T09:17:35: - Local:         http://localhost:3000
+2026-02-05T09:17:35: - Network:       http://172.31.16.40:3000
+2026-02-05T09:17:35: 
+2026-02-05T09:17:35: ✓ Starting...
+2026-02-05T09:17:36: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:17:36: ✓ Ready in 1194ms
+2026-02-05T09:18:59: Error fetching courses: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.course.findMany()` invocation:
+
+
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: No available servers. Topology: { Type: Unknown, Servers: [ { Address: localhost:27018, Type: Unknown, Error: Kind: I/O error: Connection refused (os error 111), labels: {} } ] }, labels: {}`
+    at async y (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:1537)
+    at async c (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:7887)
+    at async l (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:8928) {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+2026-02-05T09:21:05: Error fetching courses: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.course.findMany()` invocation:
+
+
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: No available servers. Topology: { Type: Unknown, Servers: [ { Address: localhost:27018, Type: Unknown, Error: Kind: I/O error: Connection refused (os error 111), labels: {} } ] }, labels: {}`
+    at async y (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:1537)
+    at async c (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:7887)
+    at async l (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:8928) {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+2026-02-05T09:22:20: ▲ Next.js 16.1.6
+2026-02-05T09:22:20: - Local:         http://localhost:3000
+2026-02-05T09:22:20: - Network:       http://172.31.16.40:3000
+2026-02-05T09:22:20: 
+2026-02-05T09:22:20: ✓ Starting...
+2026-02-05T09:22:20: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:22:21: ✓ Ready in 1085ms
+2026-02-05T09:22:56: Error fetching courses: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.course.findMany()` invocation:
+
+
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: No available servers. Topology: { Type: Unknown, Servers: [ { Address: localhost:27018, Type: Unknown, Error: Kind: I/O error: Connection refused (os error 111), labels: {} } ] }, labels: {}`
+    at async y (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:1537)
+    at async c (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:7887)
+    at async l (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:8928) {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+2026-02-05T09:23:12: ▲ Next.js 16.1.6
+2026-02-05T09:23:12: - Local:         http://localhost:3000
+2026-02-05T09:23:12: - Network:       http://172.31.16.40:3000
+2026-02-05T09:23:12: 
+2026-02-05T09:23:12: ✓ Starting...
+2026-02-05T09:23:12: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:23:12: ✓ Ready in 759ms
+2026-02-05T09:23:48: Error fetching courses: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.course.findMany()` invocation:
+
+
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: No available servers. Topology: { Type: Unknown, Servers: [ { Address: localhost:27018, Type: Unknown, Error: Kind: I/O error: Connection refused (os error 111), labels: {} } ] }, labels: {}`
+    at async y (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:1537)
+    at async c (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:7887)
+    at async l (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:8928) {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+2026-02-05T09:24:59: ▲ Next.js 16.1.6
+2026-02-05T09:24:59: - Local:         http://localhost:3000
+2026-02-05T09:24:59: - Network:       http://172.31.16.40:3000
+2026-02-05T09:24:59: 
+2026-02-05T09:24:59: ✓ Starting...
+2026-02-05T09:24:59: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:25:00: ✓ Ready in 1167ms
+2026-02-05T09:39:42: POST /api/courses - Starting course creation
+2026-02-05T09:39:42: Request body received: {
+  title: '1',
+  category: 'Options Trading',
+  price: 2,
+  instructorName: 'Aj'
+}
+2026-02-05T09:39:42: Validation passed, creating resources...
+2026-02-05T09:39:42: Category creation error: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.category.upsert()` invocation:
+
+
+Prisma needs to perform transactions, which requires your MongoDB server to be run as a replica set. https://pris.ly/d/mongodb-replica-set
+    at async E (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:3011)
+    at async c (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:7887)
+    at async l (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:8928) {
+  code: 'P2031',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+2026-02-05T09:39:42: Instructor creation error: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.user.upsert()` invocation:
+
+
+Prisma needs to perform transactions, which requires your MongoDB server to be run as a replica set. https://pris.ly/d/mongodb-replica-set
+    at async E (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:3453)
+    at async c (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:7887)
+    at async l (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:8928) {
+  code: 'P2031',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+2026-02-05T09:39:42: Error creating course: Error: Failed to create instructor: 
+Invalid `prisma.user.upsert()` invocation:
+
+
+Prisma needs to perform transactions, which requires your MongoDB server to be run as a replica set. https://pris.ly/d/mongodb-replica-set
+    at E (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:3719)
+    at async c (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:7887)
+    at async l (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:8928)
+    at async Module.S (.next/server/chunks/[root-of-the-server]__70bd3d75._.js:1:10006)
+2026-02-05T09:42:35: ▲ Next.js 16.1.6
+2026-02-05T09:42:35: - Local:         http://localhost:3000
+2026-02-05T09:42:35: - Network:       http://172.31.16.40:3000
+2026-02-05T09:42:35: 
+2026-02-05T09:42:35: ✓ Starting...
+2026-02-05T09:42:36: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:42:36: ✓ Ready in 707ms
+2026-02-05T09:43:00: POST /api/courses - Starting course creation
+2026-02-05T09:43:00: Request body received: {
+  title: 'Test Course',
+  category: 'Options Trading',
+  price: 999,
+  instructorName: undefined
+}
+2026-02-05T09:43:43: POST /api/courses - Starting course creation
+2026-02-05T09:43:43: Request body received: {
+  title: 'Test Course',
+  category: 'Options Trading',
+  price: 999,
+  instructorName: 'John Doe'
+}
+2026-02-05T09:43:43: Validation passed, creating resources...
+2026-02-05T09:43:43: Category ready: 6984664f52f42c79f9264d5a
+2026-02-05T09:43:43: Instructor ready: 6984664f52f42c79f9264d5b
+2026-02-05T09:43:43: Creating course with slug: test-course-623034
+2026-02-05T09:43:43: Course created successfully: 6984664f52f42c79f9264d5c
+2026-02-05T09:46:55: ▲ Next.js 16.1.6
+2026-02-05T09:46:55: - Local:         http://localhost:3000
+2026-02-05T09:46:55: - Network:       http://172.31.16.40:3000
+2026-02-05T09:46:55: 
+2026-02-05T09:46:55: ✓ Starting...
+2026-02-05T09:46:55: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:46:55: ✓ Ready in 709ms
+2026-02-05T09:47:59: ▲ Next.js 16.1.6
+2026-02-05T09:47:59: - Local:         http://localhost:3000
+2026-02-05T09:47:59: - Network:       http://172.31.16.40:3000
+2026-02-05T09:47:59: 
+2026-02-05T09:47:59: ✓ Starting...
+2026-02-05T09:48:00: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-05T09:48:00: ✓ Ready in 1122ms
+2026-02-05T10:07:19: POST /api/courses - Starting course creation
+2026-02-05T10:07:19: Request body received: {
+  title: 'Test01',
+  category: 'Options Trading',
+  price: 999,
+  instructorName: 'Periyasamy'
+}
+2026-02-05T10:07:19: Validation passed, creating resources...
+2026-02-05T10:07:19: Category ready: 6984664f52f42c79f9264d5a
+2026-02-05T10:07:20: Instructor ready: 69846bd8ca92df3db4e3ad80
+2026-02-05T10:07:20: Creating course with slug: test01-039950
+2026-02-05T10:07:20: Course created successfully: 69846bd8ca92df3db4e3ad81
+2026-02-05T11:19:37: POST /api/courses - Starting course creation
+2026-02-05T11:19:37: Request body received: {
+  title: 'Option buying courses',
+  category: 'Options Trading',
+  price: 15000,
+  instructorName: 'Periyasamy Ravi'
+}
+2026-02-05T11:19:37: Validation passed, creating resources...
+2026-02-05T11:19:37: Category ready: 6984664f52f42c79f9264d5a
+2026-02-05T11:19:38: Instructor ready: 6984761edd459cb6a725a35e
+2026-02-05T11:19:38: Creating course with slug: option-buying-courses-377985
+2026-02-05T11:19:38: Course created successfully: 69847ccaca92df3db4e3ad83
+2026-02-05T18:49:58: Error: Failed to find Server Action "x". This request might be from an older or newer deployment.
+Read more: https://nextjs.org/docs/messages/failed-to-find-server-action
+    at ignore-listed frames
+2026-02-06T03:00:09: Error: Failed to find Server Action "x". This request might be from an older or newer deployment.
+Read more: https://nextjs.org/docs/messages/failed-to-find-server-action
+    at ignore-listed frames
