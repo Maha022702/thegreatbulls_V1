@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/webinars/layout,_N_T_/admin/webinars/page,_N_T_/admin/webinars"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/webinars/__PAGE__",
+    "/admin/webinars",
+    "/admin",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "/admin/courses/page": "app/admin/courses/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/courses/[id]/route": "app/api/courses/[id]/route.js",
+  "/api/courses/route": "app/api/courses/route.js",
+  "/courses/[slug]/page": "app/courses/[slug]/page.js"
+}
