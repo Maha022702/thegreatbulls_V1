@@ -3,22 +3,20 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactCompiler: true,
   output: 'standalone', // Required for Docker deployments
-  async rewrites() {
-    return {
-      beforeFiles: [
-        // Rewrite admin.thegreatbulls.in/* to /admin/*
-        {
-          source: '/:path(.*)',
-          has: [
-            {
-              type: 'host',
-              value: 'admin\\.thegreatbulls\\.in',
-            },
-          ],
-          destination: '/admin/:path',
-        },
-      ],
-    };
+  async redirects() {
+    return [
+      {
+        source: '/:path(.*)',
+        has: [
+          {
+            type: 'host',
+            value: 'admin\\.thegreatbulls\\.in',
+          },
+        ],
+        destination: '/admin/:path',
+        permanent: false,
+      },
+    ];
   },
   images: {
     remotePatterns: [
