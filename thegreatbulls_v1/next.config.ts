@@ -3,6 +3,23 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactCompiler: true,
   output: 'standalone', // Required for Docker deployments
+  async rewrites() {
+    return {
+      beforeFiles: [
+        // This will rewrite admin.thegreatbulls.in to the admin section
+        {
+          source: '/:path(.*)',
+          has: [
+            {
+              type: 'host',
+              value: 'admin(?:\\.thegreatbulls\\.in)?',
+            },
+          ],
+          destination: '/admin/:path',
+        },
+      ],
+    };
+  },
   images: {
     remotePatterns: [
       {
