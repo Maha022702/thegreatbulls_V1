@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  output: 'standalone', // Required for Docker deployments
-  dir: './src', // Source directory
+  output: 'standalone',
   images: {
     remotePatterns: [
       {
@@ -12,18 +11,9 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '**.amazonaws.com' // For S3 images if needed
+        hostname: '**.amazonaws.com'
       }
     ]
-  },
-  experimental: {},
-  // Production optimizations
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
-  // Environment variables that should be available at build time
-  env: {
-    NEXT_PUBLIC_APP_URL: process.env.NEXTAUTH_URL || 'http://localhost:3000'
   }
 };
 
