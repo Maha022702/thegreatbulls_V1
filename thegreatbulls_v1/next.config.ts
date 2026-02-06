@@ -6,13 +6,13 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
-        // This will rewrite admin.thegreatbulls.in to the admin section
+        // Rewrite admin.thegreatbulls.in/* to /admin/*
         {
           source: '/:path(.*)',
           has: [
             {
               type: 'host',
-              value: 'admin(?:\\.thegreatbulls\\.in)?',
+              value: 'admin\\.thegreatbulls\\.in',
             },
           ],
           destination: '/admin/:path',
