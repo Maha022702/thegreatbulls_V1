@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Badge } from '@/components/ui/badge'
 import { motion } from 'framer-motion'
 import { Award, BookOpen, Crown, Star, Target, TrendingUp, Users, Zap } from 'lucide-react'
+import { Navbar } from '@/components/Navbar'
 
 type CourseLevelType = 'BEGINNER' | 'INTERMEDIATE' | 'ADVANCED' | 'EXPERT'
 type CourseStatusType = 'DRAFT' | 'REVIEW' | 'PUBLISHED' | 'ARCHIVED' | 'DELETED'
@@ -165,6 +166,7 @@ export default function CoursesPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 py-16 px-4">
+      <Navbar />
       <div className="max-w-7xl mx-auto space-y-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { Calendar, Clock, Users, Play } from 'lucide-react'
+import { Navbar } from '@/components/Navbar'
 
 // Mock data
 const upcomingWebinars = [
@@ -98,6 +99,7 @@ export default function WebinarsPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 py-16 px-4">
+      <Navbar />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

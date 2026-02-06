@@ -32,7 +32,6 @@ export default function RootLayout({
         className={`${inter.variable} ${manrope.variable} font-sans antialiased`}
       >
         <Providers>
-          <Navbar />
           {children}
         </Providers>
       </body>

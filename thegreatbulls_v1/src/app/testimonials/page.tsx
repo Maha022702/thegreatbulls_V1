@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { Star, TrendingUp, Award, Play, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Navbar } from '@/components/Navbar'
 
 // Mock data with powerful results
 const testimonials = [
@@ -110,6 +111,7 @@ export default function TestimonialsPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 py-16 px-4">
+      <Navbar />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
